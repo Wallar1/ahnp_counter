@@ -1,0 +1,19 @@
+:javascript
+  $(document).on('turbolinks:load',function(){
+    $('#datatable').DataTable();
+
+    $('#increment_button').click(function(){
+      $.ajax({
+        url: '/users',
+        method: 'GET',
+        success: function(response){
+          $('#users_table').html(response.users)
+          $('#datatable').DataTable()
+        }
+      })
+    })
+  })
+
+=render partial: 'users_table'
+
+%button.btn.btn-primary#increment_button Increment My Counter

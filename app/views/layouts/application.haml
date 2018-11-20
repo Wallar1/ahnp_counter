@@ -6,8 +6,11 @@
     = csrf_meta_tags
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
     / Custom fonts for this template
-    %link{:href => "//fonts.googleapis.com/css?family=Nunito:300,400,700", :rel => "stylesheet"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body#page-top
+
+    %script{src: 'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js'}
+    %link{rel: "stylesheet", href: 'https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css'}
+  %body
+    = render partial: 'layouts/flash'
     = yield

@@ -7,14 +7,10 @@ end
 
 
 gem 'haml'
-gem 'html2haml'
-gem "font-awesome-rails"
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'pg'
-gem 'formtastic', '~> 3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
